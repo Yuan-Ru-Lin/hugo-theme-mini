@@ -36,6 +36,12 @@
             {{ end }}
         </div>
     {{ end}}
+
+    {{ if or .Params.thanks }}
+        <hr>
+        <h2 class="acknowledgements">Acknowledgements</h2>
+        {{ .Params.thanks }}
+    {{ end }}
     
     {{ partial "comment.html" . }}
 
