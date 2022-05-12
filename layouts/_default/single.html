@@ -40,7 +40,7 @@
     {{ if or .Params.thanks }}
         <hr>
         <h2 class="acknowledgements">Acknowledgements</h2>
-        {{ .Params.thanks }}
+        {{ .Params.thanks | markdownify }}
     {{ end }}
     
     {{ partial "comment.html" . }}
